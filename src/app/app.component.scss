@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid green;
+    position: sticky;
+    top: 0;
+    color: green;
+    padding: 3vh 2vh;
+
+    p {
+        font-size:x-large;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 3rem;
+        font-size: larger;
+    }
+}
+
+main {
+    min-height: 100vh;    
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 3vh;
+    border-top: 2px solid green;
+}
