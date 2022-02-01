@@ -1,13 +1,19 @@
-<article *ngFor="let countryData of data | async">
-    <h1>{{country}} | {{countryData.nativeName}}</h1>
-    <img src="{{countryData.flag}}" alt="Flag of the country of {{country}}" />
-    <h2>Capital: {{countryData.capital}}</h2>
-    <p>Population: {{countryData.population}}</p>
-    <p>Continent: {{countryData.region}}</p>
-    <ul> Currency: 
-        <li *ngFor="let currency of countryData.currencies">{{currency.code}} | {{currency.name}} | {{currency.symbol}}</li>
-    </ul>
-    <ul> Languages: 
-        <li *ngFor="let language of countryData.languages">{{language.name}} | {{language.nativeName}}</li>
-    </ul>
+<article *ngFor="let countryData of data | async" class="country-article">
+    <div class="name-capital">
+        <h1>{{country}} <span *ngIf="country !== countryData.nativeName">| {{countryData.nativeName}}</span></h1>
+        <h2>Capital: {{countryData.capital}}</h2>
+    </div>
+    <div class="image-and-details">
+        <img src="{{countryData.flag}}" alt="Flag of the country of {{country}}" />.
+        <section class="right-side">
+            <p>Population: <b>{{countryData.population}}</b></p>
+            <p>Continent: <b>{{countryData.region}}</b></p>
+            <ul> Currency: 
+                <li *ngFor="let currency of countryData.currencies"><b>{{currency.code}} | {{currency.name}} | {{currency.symbol}}</b></li>
+            </ul>
+            <ul> Languages: 
+                <li *ngFor="let language of countryData.languages"><b>{{language.name}} | {{language.nativeName}}</b></li>
+            </ul>
+        </section>
+    </div>
 </article>

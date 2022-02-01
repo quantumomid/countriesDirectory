@@ -39,3 +39,9 @@ section {
         transition: color 0.15s ease, background 0.55s ease;
       }
 }
+
+@media only screen and (max-width: 400px) {
+    h1, p {
+        text-align: center;
+    }
+}
