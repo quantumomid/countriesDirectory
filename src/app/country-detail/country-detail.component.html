@@ -1,1 +1,13 @@
-<p>country-detail works!</p>
+<article *ngFor="let countryData of data | async">
+    <h1>{{country}} | {{countryData.nativeName}}</h1>
+    <img src="{{countryData.flag}}" alt="Flag of the country of {{country}}" />
+    <h2>Capital: {{countryData.capital}}</h2>
+    <p>Population: {{countryData.population}}</p>
+    <p>Continent: {{countryData.region}}</p>
+    <ul> Currency: 
+        <li *ngFor="let currency of countryData.currencies">{{currency.code}} | {{currency.name}} | {{currency.symbol}}</li>
+    </ul>
+    <ul> Languages: 
+        <li *ngFor="let language of countryData.languages">{{language.name}} | {{language.nativeName}}</li>
+    </ul>
+</article>
