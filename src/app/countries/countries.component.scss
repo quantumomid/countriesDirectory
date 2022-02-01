@@ -1,0 +1,22 @@
+.countries {
+    padding: 1vh;
+    font-size: x-large;
+
+    h1 {
+        margin-top: 5vh;
+    }
+
+    .single {
+        padding: 2vh 16px;
+        background: #fff;
+        display: block;
+        margin: 20px 10px;
+        border-left: 8px solid #fff;
+        text-transform: capitalize;
+        color: black;
+    
+        &:hover {
+            border-left: 8px solid green;
+        }
+      }
+}
