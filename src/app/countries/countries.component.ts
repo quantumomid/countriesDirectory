@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class CountriesComponent implements OnInit {
 
   readonly ROOT_URL = "https://restcountries.com/v2/";
+  // Countries now space api - https://countriesnow.space/api/v0.1/countries/iso
   countries: any;
 
   constructor(private http: HttpClient) { }
