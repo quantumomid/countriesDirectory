@@ -1,3 +1,11 @@
+<form>
+    <input 
+        type="text"
+        placeholder="Filter countries by name"
+        [(ngModel)]="inputTerm"
+        name="inputTerm"
+    />
+</form>
 <section class="countries">
     <h1>All Countries</h1>
     <article *ngFor="let country of countries | async">

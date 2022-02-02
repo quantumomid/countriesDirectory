@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./countries.component.scss']
 })
 export class CountriesComponent implements OnInit {
-
+  inputTerm: string = "";
+  
   readonly ROOT_URL = "https://restcountries.com/v2/";
   // Countries now space api - https://countriesnow.space/api/v0.1/countries/iso
   countries: any;

@@ -20,3 +20,24 @@
         }
       }
 }
+
+form {
+    margin-top: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    input{
+        padding: 1rem;
+        width: 50%;
+        border-radius: 10px;
+        font-size: medium;
+        border: 2px solid white;
+
+        &:focus,
+        &:active{
+            border: 2px solid cadetblue;
+            outline: cadetblue;
+        }
+    }
+}
