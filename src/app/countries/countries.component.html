@@ -8,7 +8,7 @@
 </form>
 <section class="countries">
     <h1>All Countries</h1>
-    <article *ngFor="let country of countries | async">
+    <article *ngFor="let country of countries | async | filter: inputTerm">
         <a class="single" routerLink="/countries/{{country.name}}">{{country.name}}</a>
     </article>
 </section>
