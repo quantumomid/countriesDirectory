@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CountriesService } from '../countries.service';
 
 @Component({
   selector: 'app-country-detail',
@@ -11,14 +11,13 @@ export class CountryDetailComponent implements OnInit {
 
   country: string;
   data: any;
-  readonly ROOT_URL = "https://restcountries.com/v2/name/";
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {
+  constructor(private route: ActivatedRoute, private countries: CountriesService) {
     this.country = route.snapshot.params["countryName"];
   }
 
   ngOnInit(): void {
-    this.data = this.http.get(this.ROOT_URL+this.country);
+    this.data = this.countries.getCountryDetail(this.country);
   }
 
 }
