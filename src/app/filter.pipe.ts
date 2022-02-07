@@ -8,7 +8,7 @@ export class FilterPipe implements PipeTransform {
   // when we use actual pipe therefore no need to actually pass the first parameter
   transform(countries: any, inputTerm: any): any {
     // check if search term is undefined
-    if (inputTerm === undefined) return countries;
+    if (countries === null || inputTerm === undefined) return countries;
 
     return countries.filter((country: any) => country.name.toLowerCase().includes(inputTerm.toLowerCase()));
   }
